@@ -1,0 +1,22 @@
+{
+    "Power": "Stroom",
+    "Target temperature": "Doeltemperatuur",
+    "|Auto|Cool|Heat|Fan|Dry": "|Auto|Koelen|Verwarmen|Ventilator|Drogen",
+    "Mode": "Modus",
+    "|Auto|Low|Medium|High|Max": "|Auto|Laag|Middel|Hoog|Max",
+    "Fan Rate": "Ventilatorsnelheid",
+    "Off|Auto": "Uit|Auto",
+    "Off|On": "Uit|Aan",
+    "Vertical air flow": "Verticale luchtstroom",
+    "Horizontal air flow": "Horizontale luchtstroom",
+    "Silent mode": "Stille modus",
+    "Turbo mode": "Turbomodus",
+    "Economy mode": "Spaarstand",
+    "Filter": "Filter",
+    "Cleaning": "Reiniging",
+    "Sound signal": "Geluidsignaal",
+    "Off|Send only|Store only|Send and store": "Uit|Alleen verzenden|Alleen opslaan|Verzenden en opslaan",
+    "IR command resend": "IR-opdracht opnieuw verzenden",
+    "Automatic IR retransmission": "Automatische IR-herzending",
+    "Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min": "Uit|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min"
+}

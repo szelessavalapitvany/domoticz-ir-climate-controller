@@ -1,0 +1,22 @@
+{
+    "Power":"Kapcsolás",
+    "Target temperature":"Célhőmérséklet",
+    "|Auto|Cool|Heat|Fan|Dry":"|Automatikus|Hűtés|Fűtés|Ventilátor|Szárítás",
+    "Mode":"Mód",
+    "|Auto|Low|Medium|High|Max":"Auto|Alacsony|Közepes|Magas|Maximum",
+    "Fan Rate":"Ventilátorsebesség",
+    "Off|Auto":"Ki|Automatikus",
+    "Off|On":"Ki|Be",
+    "Vertical air flow":"Függőleges légterelés",
+    "Horizontal air flow":"Vízszintes légterelés",
+    "Silent mode":"Csendes mód",
+    "Turbo mode":"Turbó mód",
+    "Economy mode":"Gazdaságos mód",
+    "Filter":"Szűrő",
+    "Tisztítás":"Cleaning",
+    "Sound signal":"Hangjelzés",
+    "Off|Send only|Store only|Send and store":"Ki|Csak küldés|Csak tárolás|Küldés és tárolás",
+    "IR command resend":"IR parancs újraküldése",
+    "Automatic IR retransmission":"Automatikus IR újraküldése",
+    "Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min":"Ki|1 perc|5 perc|15 perc|30 perc|60 perc|120 perc|240 perc|480 perc"
+}

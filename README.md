@@ -1,0 +1,1 @@
+# domoticz-ir-climate-controller

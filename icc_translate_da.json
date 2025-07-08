@@ -1,0 +1,22 @@
+{
+    "Power": "Strøm",
+    "Target temperature": "Måltemperatur",
+    "|Auto|Cool|Heat|Fan|Dry": "|Auto|Køl|Varme|Blæser|Tør",
+    "Mode": "Tilstand",
+    "|Auto|Low|Medium|High|Max": "|Auto|Lav|Mellem|Høj|Maks",
+    "Fan Rate": "Blæserhastighed",
+    "Off|Auto": "Fra|Auto",
+    "Off|On": "Fra|Til",
+    "Vertical air flow": "Lodret luftstrøm",
+    "Horizontal air flow": "Vandret luftstrøm",
+    "Silent mode": "Støjsvag tilstand",
+    "Turbo mode": "Turbo tilstand",
+    "Economy mode": "Økonomi tilstand",
+    "Filter": "Filter",
+    "Cleaning": "Rensning",
+    "Sound signal": "Lydsignal",
+    "Off|Send only|Store only|Send and store": "Fra|Kun send|Kun gem|Send og gem",
+    "IR command resend": "Genudsend IR-kommando",
+    "Automatic IR retransmission": "Automatisk IR-gentagelse",
+    "Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min": "Fra|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min"
+}

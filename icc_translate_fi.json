@@ -1,0 +1,22 @@
+{
+    "Power": "Virta",
+    "Target temperature": "Tavoitelämpötila",
+    "|Auto|Cool|Heat|Fan|Dry": "|Auto|Viileä|Lämmitys|Tuuletin|Kuivaus",
+    "Mode": "Tila",
+    "|Auto|Low|Medium|High|Max": "|Auto|Matala|Keskitaso|Korkea|Maksimi",
+    "Fan Rate": "Tuuletinnopeus",
+    "Off|Auto": "Pois|Auto",
+    "Off|On": "Pois|Päällä",
+    "Vertical air flow": "Pystysuuntainen ilmavirta",
+    "Horizontal air flow": "Vaakasuuntainen ilmavirta",
+    "Silent mode": "Hiljainen tila",
+    "Turbo mode": "Turbo-tila",
+    "Economy mode": "Säästötila",
+    "Filter": "Suodatin",
+    "Cleaning": "Puhdistus",
+    "Sound signal": "Äänimerkki",
+    "Off|Send only|Store only|Send and store": "Pois|Vain lähetä|Vain tallenna|Lähetä ja tallenna",
+    "IR command resend": "Lähetä IR-komento uudelleen",
+    "Automatic IR retransmission": "Automaattinen IR-uudelleenlähetys",
+    "Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min": "Pois|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min"
+}

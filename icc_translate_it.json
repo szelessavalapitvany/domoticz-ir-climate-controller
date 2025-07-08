@@ -1,0 +1,22 @@
+{
+    "Power": "Alimentazione",
+    "Target temperature": "Temperatura obiettivo",
+    "|Auto|Cool|Heat|Fan|Dry": "|Auto|Freddo|Caldo|Ventola|Asciutto",
+    "Mode": "Modalità",
+    "|Auto|Low|Medium|High|Max": "|Auto|Basso|Medio|Alto|Massimo",
+    "Fan Rate": "Velocità della ventola",
+    "Off|Auto": "Spento|Auto",
+    "Off|On": "Spento|Acceso",
+    "Vertical air flow": "Flusso d'aria verticale",
+    "Horizontal air flow": "Flusso d'aria orizzontale",
+    "Silent mode": "Modalità silenziosa",
+    "Turbo mode": "Modalità turbo",
+    "Economy mode": "Modalità risparmio",
+    "Filter": "Filtro",
+    "Cleaning": "Pulizia",
+    "Sound signal": "Segnale acustico",
+    "Off|Send only|Store only|Send and store": "Spento|Solo invio|Solo salvataggio|Invia e salva",
+    "IR command resend": "Reinvia comando IR",
+    "Automatic IR retransmission": "Ritrasmissione IR automatica",
+    "Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min": "Spento|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min"
+}

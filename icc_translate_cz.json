@@ -1,0 +1,22 @@
+{
+    "Power": "Napájení",
+    "Target temperature": "Cílová teplota",
+    "|Auto|Cool|Heat|Fan|Dry": "|Auto|Chlazení|Topení|Ventilátor|Sušení",
+    "Mode": "Režim",
+    "|Auto|Low|Medium|High|Max": "|Auto|Nízký|Střední|Vysoký|Max",
+    "Fan Rate": "Rychlost ventilátoru",
+    "Off|Auto": "Vypnuto|Auto",
+    "Off|On": "Vypnuto|Zapnuto",
+    "Vertical air flow": "Vertikální proudění vzduchu",
+    "Horizontal air flow": "Horizontální proudění vzduchu",
+    "Silent mode": "Tichý režim",
+    "Turbo mode": "Turbo režim",
+    "Economy mode": "Úsporný režim",
+    "Filter": "Filtr",
+    "Cleaning": "Čištění",
+    "Sound signal": "Zvukový signál",
+    "Off|Send only|Store only|Send and store": "Vyp.|Pouze odeslat|Pouze uložit|Odeslat a uložit",
+    "IR command resend": "Znovu odeslat IR příkaz",
+    "Automatic IR retransmission": "Automatické opakování IR",
+    "Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min": "Vyp.|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min"
+}

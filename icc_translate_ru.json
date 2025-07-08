@@ -1,0 +1,22 @@
+{
+    "Power": "Питание",
+    "Target temperature": "Целевая температура",
+    "|Auto|Cool|Heat|Fan|Dry": "|Авто|Охлаждение|Нагрев|Вентилятор|Сушка",
+    "Mode": "Режим",
+    "|Auto|Low|Medium|High|Max": "|Авто|Низкий|Средний|Высокий|Макс",
+    "Fan Rate": "Скорость вентилятора",
+    "Off|Auto": "Выкл|Авто",
+    "Off|On": "Выкл|Вкл",
+    "Vertical air flow": "Вертикальный поток воздуха",
+    "Horizontal air flow": "Горизонтальный поток воздуха",
+    "Silent mode": "Тихий режим",
+    "Turbo mode": "Турбо режим",
+    "Economy mode": "Экономичный режим",
+    "Filter": "Фильтр",
+    "Cleaning": "Очистка",
+    "Sound signal": "Звуковой сигнал",
+    "Off|Send only|Store only|Send and store": "Выкл|Только отправка|Только хранение|Отправка и хранение",
+    "IR command resend": "Повторная отправка IR-команды",
+    "Automatic IR retransmission": "Автоматическая повторная передача IR",
+    "Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min": "Выкл|1 мин|5 мин|15 мин|30 мин|60 мин|120 мин|240 мин|480 мин"
+}

@@ -1,0 +1,22 @@
+{
+    "Power":"Power",
+    "Target temperature":"Target temperature",
+    "|Auto|Cool|Heat|Fan|Dry":"|Auto|Cool|Heat|Fan|Dry",
+    "Mode":"Mode",
+    "|Auto|Low|Medium|High|Max":"|Auto|Low|Medium|High|Max",
+    "Fan Rate":"Fan Rate",
+    "Off|Auto":"Off|Auto",
+    "Off|On":"Off|On",
+    "Vertical air flow":"Vertical air flow",
+    "Horizontal air flow":"Horizontal air flow",
+    "Silent mode":"Silent mode",
+    "Turbo mode":"Turbo mode",
+    "Economy mode":"Economy mode",
+    "Filter":"Filter",
+    "Tisztítás":"Tisztítás",
+    "Sound signal":"Sound signal",
+    "Off|Send only|Store only|Send and store":"Off|Send only|Store only|Send and store",
+    "IR command resend":"IR command resend",
+    "Automatic IR retransmission":"Automatic IR retransmission",
+    "Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min":"Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min"
+}

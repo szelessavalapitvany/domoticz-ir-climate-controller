@@ -1,0 +1,22 @@
+{
+    "Power": "電源",
+    "Target temperature": "目標温度",
+    "|Auto|Cool|Heat|Fan|Dry": "|自動|冷房|暖房|送風|除湿",
+    "Mode": "モード",
+    "|Auto|Low|Medium|High|Max": "|自動|低|中|高|最大",
+    "Fan Rate": "風量",
+    "Off|Auto": "オフ|自動",
+    "Off|On": "オフ|オン",
+    "Vertical air flow": "上下風向",
+    "Horizontal air flow": "左右風向",
+    "Silent mode": "静音モード",
+    "Turbo mode": "ターボモード",
+    "Economy mode": "省エネモード",
+    "Filter": "フィルター",
+    "Cleaning": "クリーニング",
+    "Sound signal": "音声信号",
+    "Off|Send only|Store only|Send and store": "オフ|送信のみ|保存のみ|送信して保存",
+    "IR command resend": "IRコマンド再送信",
+    "Automatic IR retransmission": "自動IR再送信",
+    "Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min": "オフ|1分|5分|15分|30分|60分|120分|240分|480分"
+}

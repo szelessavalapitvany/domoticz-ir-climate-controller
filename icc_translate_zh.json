@@ -1,0 +1,22 @@
+{
+    "Power": "电源",
+    "Target temperature": "目标温度",
+    "|Auto|Cool|Heat|Fan|Dry": "|自动|制冷|制热|风扇|干燥",
+    "Mode": "模式",
+    "|Auto|Low|Medium|High|Max": "|自动|低|中|高|最大",
+    "Fan Rate": "风速",
+    "Off|Auto": "关|自动",
+    "Off|On": "关|开",
+    "Vertical air flow": "垂直气流",
+    "Horizontal air flow": "水平气流",
+    "Silent mode": "静音模式",
+    "Turbo mode": "极速模式",
+    "Economy mode": "节能模式",
+    "Filter": "过滤器",
+    "Cleaning": "清洁",
+    "Sound signal": "声音信号",
+    "Off|Send only|Store only|Send and store": "关|仅发送|仅存储|发送并存储",
+    "IR command resend": "重新发送红外指令",
+    "Automatic IR retransmission": "自动红外重发",
+    "Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min": "关|1 分钟|5 分钟|15 分钟|30 分钟|60 分钟|120 分钟|240 分钟|480 分钟"
+}

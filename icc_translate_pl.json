@@ -1,0 +1,22 @@
+{
+    "Power": "Zasilanie",
+    "Target temperature": "Temperatura docelowa",
+    "|Auto|Cool|Heat|Fan|Dry": "|Auto|Chłodzenie|Grzanie|Wentylator|Suszenie",
+    "Mode": "Tryb",
+    "|Auto|Low|Medium|High|Max": "|Auto|Niski|Średni|Wysoki|Maks",
+    "Fan Rate": "Prędkość wentylatora",
+    "Off|Auto": "Wyłączone|Auto",
+    "Off|On": "Wyłączone|Włączone",
+    "Vertical air flow": "Pionowy przepływ powietrza",
+    "Horizontal air flow": "Poziomy przepływ powietrza",
+    "Silent mode": "Tryb cichy",
+    "Turbo mode": "Tryb turbo",
+    "Economy mode": "Tryb oszczędny",
+    "Filter": "Filtr",
+    "Cleaning": "Czyszczenie",
+    "Sound signal": "Sygnał dźwiękowy",
+    "Off|Send only|Store only|Send and store": "Wył.|Tylko wyślij|Tylko zapisz|Wyślij i zapisz",
+    "IR command resend": "Ponowne wysłanie polecenia IR",
+    "Automatic IR retransmission": "Automatyczna retransmisja IR",
+    "Off|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min": "Wył.|1 min|5 min|15 min|30 min|60 min|120 min|240 min|480 min"
+}
