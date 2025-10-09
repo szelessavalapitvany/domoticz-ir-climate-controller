@@ -5,6 +5,13 @@ Python plugin for Domoticz to add Tasmota IR climate controller integration
 
 - Domoticz 2022.1 or higher
 - Make sure that your Domoticz supports Python plugins (https://www.domoticz.com/wiki/Using_Python_plugins)
+- A Tasmota IR controller device is required.
+
+  You can:
+  - **Build your own IR sender** using an ESP device with an IR LED, following the official guide:  
+    [https://tasmota.github.io/docs/IR-Remote/](https://tasmota.github.io/docs/IR-Remote/)
+  
+  - **Buy a ready-made device**, such as the [Athom Tasmota IR Controller](https://www.athom.tech/blank-1/tasmota-ir-controller)
 
 ## Installation
 
