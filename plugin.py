@@ -1,7 +1,7 @@
 """
 Tasmota IR climate controller python plugin for Domoticz
 Author: szelessavmuhely.hu,
-Version: 1.0.0 (majus 25, 2025) 
+Version: 1.1.0 (september 10, 2025) 
 
 <plugin key="ICC_IKV" name="IR climate controller _ Tasmota IR klima vezérlő" author="szelessavmuhely.hu" version="1.0.0">
 	<description>
@@ -169,7 +169,6 @@ import itertools
 import re
 import os
 import heapq
-from distutils.version import LooseVersion
 
 class deviceparam:
 
