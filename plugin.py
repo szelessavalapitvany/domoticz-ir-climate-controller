@@ -232,8 +232,6 @@ class BasePlugin:
 
 	def onStart(self):
 
-		self.location = Settings["Location"].split(";")
-		
 		tl = TranslationLoader(Parameters["Language"])
 		
 		# Set the appropriate logging level | A megfelelő naplózási szint beállítása
@@ -509,19 +507,28 @@ class BasePlugin:
 
 	def onHeartbeat(self):
 
-		if self.AC_last_command_time is None :
+		# Skip heartbeat if initialization is incomplete | Heartbeat kihagyása, ha az inicializálás nem fejeződött be
+		if not getattr(self, "url", None):
+			return
 
-			request.urlopen(self.url)
-			Domoticz.Debug(f"IRHVAC command sent: {self.url} | IRHVAC parancs elküldve: {self.url}")
+		# Check whether an IR command needs to be sent | Ellenőrizzük, szükséges-e IR-parancsot küldeni
+		if self.AC_last_command_time is not None:
+			if self.AC_ir_resend is None:
+				return
+			if datetime.now() - self.AC_last_command_time < timedelta(minutes=self.AC_ir_resend):
+				return
+
+		# Send IR command with a connection timeout | IR-parancs küldése kapcsolati időkorláttal
+		try:
+			with request.urlopen(self.url, timeout=3) as response:
+				response.read()
+
 			self.AC_last_command_time = datetime.now()
+			Domoticz.Debug(f"IRHVAC command sent: {self.url} | IRHVAC parancs elküldve: {self.url}")
 
-			
-		elif self.AC_ir_resend is not None:
-			
-			if datetime.now() - self.AC_last_command_time >= timedelta(minutes=self.AC_ir_resend):
-				request.urlopen(self.url)
-				Domoticz.Debug(f"IRHVAC command sent: {self.url} | IRHVAC parancs elküldve: {self.url}")
-				self.AC_last_command_time = datetime.now()
+		except Exception as e:
+			self.AC_last_command_time = datetime.now()
+			Domoticz.Error(f"Failed to send IRHVAC command: {e} | IRHVAC parancs küldése sikertelen: {e}")
 
 
 	def WriteLog(self, message, level="Normal"):
