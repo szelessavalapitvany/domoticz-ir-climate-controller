@@ -1,9 +1,9 @@
 """
 Tasmota IR climate controller python plugin for Domoticz
 Author: szelessavmuhely.hu,
-Version: 1.1.0 (september 10, 2025) 
+Version: 1.1.1 (October 14, 2026) 
 
-<plugin key="ICC_IKV" name="IR climate controller _ Tasmota IR klima vezérlő" author="szelessavmuhely.hu" version="1.0.0">
+<plugin key="ICC_IKV" name="IR climate controller _ Tasmota IR klima vezérlő" author="szelessavmuhely.hu" version="1.1.1">
 	<description>
 		<h2>IR climate controller _ Tasmota IR klima vezérlő</h2><br/>
 		<br/>
@@ -188,7 +188,7 @@ class TranslationLoader:
 	def __init__(self, language="en"):
 		self.translations = self.load_translations(language)
 		if not self.translations:
-			Domoticz.Debug("An error occurred while loading the translations!")
+			Domoticz.Debug("An error occurred while loading translations! | Hiba történt a fordítások betöltésekor!")
 			self.translations = self.load_translations("en") 
 
 	def load_translations(self, language):
@@ -197,11 +197,11 @@ class TranslationLoader:
 			with open(file_path, 'r', encoding='utf-8') as file:
 				return json.load(file)
 		except (FileNotFoundError, json.JSONDecodeError) as e:
-			Domoticz.Debug(f"Error loading the file '{file_path}': {e}")
+			Domoticz.Debug(f"Error loading file '{file_path}': {e} | Hiba a(z) '{file_path}' fájl betöltésekor: {e}")
 			return {} 
 
 	def t(self, text):
-		return self.translations.get(text, text)  # If there is no translation, it returns with the original text
+		return self.translations.get(text, text)  # Return the original text if translation is missing | Hiányzó fordítás esetén az eredeti szöveget adja vissza
 
 class BasePlugin:
 
@@ -236,7 +236,7 @@ class BasePlugin:
 		
 		tl = TranslationLoader(Parameters["Language"])
 		
-		# állítsa be a megfelelő naplózási szintet
+		# Set the appropriate logging level | A megfelelő naplózási szint beállítása
 		try:
 			debuglevel = int(Parameters["Mode3"])
 		except ValueError:
@@ -489,10 +489,15 @@ class BasePlugin:
 
 	def onCommand(self, Unit, Command, Level, Color):
 
-		Domoticz.Debug("onCommand called for Unit {}: Command '{}', Level: {}".format(Unit, Command, Level))
+		Domoticz.Debug("onCommand called for Unit {}: Command '{}', Level: {} | onCommand meghívva, egység: {}, parancs: '{}', szint: {}".format(Unit, Command, Level, Unit, Command, Level))
 
-		nvalue = 1 if Level > 0 else 0
-		svalue = str(Level)
+		# Handle the thermostat setpoint separately | A termosztát célhőmérsékletének külön kezelése
+		if Unit == 2:
+			nvalue = 0
+			svalue = str(Level)
+		else:
+			nvalue = 1 if Level > 0 else 0
+			svalue = str(Level)
 
 		Devices[Unit].Update(nValue=nvalue, sValue=svalue)
 
@@ -507,7 +512,7 @@ class BasePlugin:
 		if self.AC_last_command_time is None :
 
 			request.urlopen(self.url)
-			Domoticz.Debug(f"IRHVAC küldés: {self.url}")
+			Domoticz.Debug(f"IRHVAC command sent: {self.url} | IRHVAC parancs elküldve: {self.url}")
 			self.AC_last_command_time = datetime.now()
 
 			
@@ -515,7 +520,7 @@ class BasePlugin:
 			
 			if datetime.now() - self.AC_last_command_time >= timedelta(minutes=self.AC_ir_resend):
 				request.urlopen(self.url)
-				Domoticz.Debug(f"IRHVAC küldés: {self.url}")
+				Domoticz.Debug(f"IRHVAC command sent: {self.url} | IRHVAC parancs elküldve: {self.url}")
 				self.AC_last_command_time = datetime.now()
 
 
@@ -565,17 +570,17 @@ def onHeartbeat():
 	_plugin.onHeartbeat()
 
 
-# Plugin utility functions ---------------------------------------------------
+# Plugin utility functions | Plugin segédfüggvények ---------------------------------------------------
 
 def DomoticzAPI(APICall):
 
 	resultJson = None
 	url = "http://{}:{}/json.htm?{}".format(Parameters["Address"], Parameters["Port"], parse.quote(APICall, safe="&="))
-	Domoticz.Debug("Calling domoticz API: {}".format(url))
+	Domoticz.Debug("Calling Domoticz API: {} | Domoticz API meghívása: {}".format(url, url))
 	try:
 		req = request.Request(url)
 		if Parameters["Username"] != "":
-			Domoticz.Debug("Add authentification for user {}".format(Parameters["Username"]))
+			Domoticz.Debug("Adding authentication for user {} | Hitelesítés hozzáadása a következő felhasználóhoz: {}".format(Parameters["Username"], Parameters["Username"]))
 			credentials = ('%s:%s' % (Parameters["Username"], Parameters["Password"]))
 			encoded_credentials = base64.b64encode(credentials.encode('ascii'))
 			req.add_header('Authorization', 'Basic %s' % encoded_credentials.decode("ascii"))
@@ -584,26 +589,26 @@ def DomoticzAPI(APICall):
 		if response.status == 200:
 			resultJson = json.loads(response.read().decode('utf-8'))
 			if resultJson["status"] != "OK":
-				Domoticz.Error("Domoticz API returned an error: status = {}".format(resultJson["status"]))
+				Domoticz.Error("Domoticz API returned an error: status = {} | Domoticz API hibát adott vissza: állapot = {}".format(resultJson["status"], resultJson["status"]))
 				resultJson = None
 		else:
-			Domoticz.Error("Domoticz API: http error = {}".format(response.status))
+			Domoticz.Error("Domoticz API HTTP error = {} | Domoticz API HTTP-hiba = {}".format(response.status, response.status))
 	except:
-		Domoticz.Error("Error calling '{}'".format(url))
+		Domoticz.Error("Error calling '{}' | Hiba a(z) '{}' meghívásakor".format(url, url))
 	return resultJson
 
 
-# Generic helper functions
+# Generic helper functions | Általános segédfüggvények
 def DumpConfigToLog():
 	for x in Parameters:
 		if Parameters[x] != "":
-			Domoticz.Debug("'" + x + "':'" + str(Parameters[x]) + "'")
-	Domoticz.Debug("Device count: " + str(len(Devices)))
+			Domoticz.Debug("Parameter | Paraméter: '" + x + "' = '" + str(Parameters[x]) + "'")
+	Domoticz.Debug("Device count | Eszközök száma: " + str(len(Devices)))
 	for x in Devices:
-		Domoticz.Debug("Device: " + str(x) + " - " + str(Devices[x]))
-		Domoticz.Debug("Device ID: '" + str(Devices[x].ID) + "'")
-		Domoticz.Debug("Device Name: '" + Devices[x].Name + "'")
-		Domoticz.Debug("Device nValue: " + str(Devices[x].nValue))
-		Domoticz.Debug("Device sValue: '" + Devices[x].sValue + "'")
-		Domoticz.Debug("Device LastLevel: " + str(Devices[x].LastLevel))
+		Domoticz.Debug("Device | Eszköz: " + str(x) + " - " + str(Devices[x]))
+		Domoticz.Debug("Device ID | Eszközazonosító: '" + str(Devices[x].ID) + "'")
+		Domoticz.Debug("Device Name | Eszköz neve: '" + Devices[x].Name + "'")
+		Domoticz.Debug("Device nValue | Eszköz nValue értéke: " + str(Devices[x].nValue))
+		Domoticz.Debug("Device sValue | Eszköz sValue értéke: '" + Devices[x].sValue + "'")
+		Domoticz.Debug("Device LastLevel | Eszköz utolsó szintje: " + str(Devices[x].LastLevel))
 	return
